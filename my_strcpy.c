@@ -5,14 +5,16 @@
 ** Task 01
 */
 
+void my_putchar(char c);
 int my_strlen(char const *str);
 
 char *my_strcpy(char *dest, char const *src)
 {
-    int length = my_strlen(src);
+    int i = 0;
 
-    for (int i = 0; i < length; i++) {
+    while (src[i] != '\0') {
         dest[i] = src[i];
+        i++;
     }
 
     return (dest);
