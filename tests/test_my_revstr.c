@@ -7,10 +7,20 @@
 
 #include <criterion/criterion.h>
 
-Test(my_revstr, revsring_string)
-{
-    char src;
+char *my_revstr(char *str);
 
-    my_revstr(src, "bamos");
+Test(my_revstr, revsring_bamos_string)
+{
+    char *src = strdup("bamos");
+
+    src = my_revstr(src);
     cr_assert_str_eq(src, "somab");
+}
+
+Test(my_revstr, reversing_several_words)
+{
+    char *src = strdup("string reversing");
+
+    src = my_revstr(src);
+    cr_assert_str_eq(src, "gnisrever gnirts");
 }

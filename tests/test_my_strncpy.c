@@ -9,7 +9,7 @@
 
 char *my_strncpy(char *dest, char const *src, int n);
 
-Test(my_strncpy, copy_char_into_other_string)
+Test(my_strncpy, copy_one_word_in_another_string)
 {
     char dest[6] = {0};
 
@@ -17,10 +17,10 @@ Test(my_strncpy, copy_char_into_other_string)
     cr_assert_str_eq(dest, "Hello");
 }
 
-Test(my_strncpy, copie_space_empty_array_to_rename)
+Test(my_strncpy, copy_)
 {
-    char dest[12] = {0};
+    char dest[11] = {0};
 
-    my_strncpy(dest, "some hello world string right here", 18);
-    cr_assert_str_eq(dest, "hello world");
+    my_strncpy(dest, "some hello world string right here", 10);
+    cr_assert_str_eq(dest, "some hello");
 }
