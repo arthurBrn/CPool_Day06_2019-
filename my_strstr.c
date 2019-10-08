@@ -43,5 +43,8 @@ char *my_strstr(char *str, char const *to_find)
 {
     int index = 0;
 
+    if (to_find[0] == '\0') {
+        return str;
+    }
     return (search_first_letter(index, str, to_find));
 }
