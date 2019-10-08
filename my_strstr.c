@@ -15,14 +15,15 @@ char *search_full_word(int index, char *str, char const *to_find)
     int original_index = index;
     int holder_index = 0;
 
-    while (str[index] == to_find[holder_index]) {
+    while (str[index] == to_find[holder_index] && str[index] != '\0') {
         index++;
         holder_index ++;
     }
+
     if (holder_index == my_strlen(to_find)) {
         return (&str[original_index]);
     } else {
-        return (search_first_letter(original_index, str, to_find));
+        return (search_first_letter(original_index + 1, str, to_find));
     }
 }
 
