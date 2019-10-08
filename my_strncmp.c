@@ -19,7 +19,7 @@ int going_through_string(char const *sx, int n)
 int my_strncmp(char const *s1, char const *s2, int n)
 {
     if (s2[0] == '\n') {
-        return (0);
+        return ('0');
     }
     // Si les deux chaines font la même taille, on les parcours et on trouve laquelle est plus grand que l'autre
     if (my_strlen(s1) == my_strlen(s2)) {
