@@ -24,3 +24,10 @@ Test(my_strncpy, copy_)
     my_strncpy(dest, "some hello world string right here", 10);
     cr_assert_str_eq(dest, "some hello");
 }
+
+Test(my_strncpy, copy_text_from_middle)
+{
+    char dest[13] = {0};
+
+    cr_assert_str_eq(my_strncpy(dest, "helloA", 5), "hello");
+}
