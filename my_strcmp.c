@@ -6,14 +6,15 @@
 */
 
 int my_strlen(char const *str);
+#include <stdio.h>
 
 int my_strcmp(char const *s1, char const *s2) {
 
     int value_string_one = 0;
     int value_string_two = 0;
-
+    int *nullPointer = NULL;
     if (s2[0] == '\0') {
-        return (0);
+        return nullPointer;
     }
 
     for (int i = 0; i < my_strlen(s1); i++) {
